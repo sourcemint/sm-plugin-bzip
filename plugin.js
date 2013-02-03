@@ -50,7 +50,9 @@ exports.for = function(API, plugin) {
         }
 
         return extractTmp().then(function() {
-            return copy();
+            return copy().then(function() {
+                return 200;
+            });
         });
     };
 }
