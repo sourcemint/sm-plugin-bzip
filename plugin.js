@@ -10,7 +10,7 @@ exports.for = function(API, plugin) {
         var tmpPath = fromPath + "~extracted";
 
         function extractTmp() {
-            if (PATH.existsSync(tmpPath)) return API.Q.resolve();
+            if (API.FS.existsSync(tmpPath)) return API.Q.resolve();
 
             API.FS.mkdirsSync(tmpPath);
 
